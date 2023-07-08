@@ -17,7 +17,7 @@ const Home = () => {
     {title:'Quatify - API Call Quotes Display With Search Input',image:quatify,link:'https://euphonious-marigold-bc95b8.netlify.app/'},
   ]
   return (
-    <div className='w-full grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 h-screen '>
+    <div className='w-full grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 lg:h-screen md:h-full sm:h-full '>
     <ProfileWithSwiper />
     {/* project right side */}
     <div className='overflow-hidden overflow-y-auto bg-gradient-to-tl from-teal-50 to-purple-50'>
