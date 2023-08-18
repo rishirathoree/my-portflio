@@ -7,7 +7,7 @@
     const [showProjects,setShowProjects] = useState(false)
     const [mousePosition,setMousePosition] = useState({x:0,y:0})
     const mousePositionValue = (e) => {
-      if(!showProjects && window.innerWidth > 500){
+      if(!showProjects && window.innerWidth > 300){
       const mouseX = e.clientX - 60;
       const mouseY = e.clientY - 60;
       setMousePosition({x:mouseX,y:mouseY})
@@ -28,7 +28,7 @@
         <div className='text-white lg:block md:block sm:hidden w-full h-full relative'>
           <div className='absolute top-0 -z-50 -right-0'><img src={pattern} className='w-full object-cover h-screen' alt="" /></div>
         </div>
-      <div onClick={()=>{setShowProjects(true)}} style={{left:`${mousePosition.x}px`,top:`${mousePosition.y}px`}} className={`absolute group/item duration-500 flex items-center justify-center top-0 right-0 w-28 h-28 rounded-full ring-1 ring-white/50 hover:ring-white/80 ${showProjects ? 'opacity-0' : 'opacity-100'}`}>
+      <div onClick={()=>{setShowProjects(true)}} style={{left:`${mousePosition.x}px`,top:`${mousePosition.y}px`}} className={`absolute group/item duration-500 flex items-center justify-center top-0 right-0 w-28 h-28 rounded-full ring-1 ring-white/50 hover:ring-white/80 lg:block md:block sm:hidden ${showProjects ? 'opacity-0' : 'opacity-100'}`}>
         <p className='font-semibold text-light cursor-pointer text-[12px] duration-700  text-white'>Show Projects</p>
       </div>
       </div>
