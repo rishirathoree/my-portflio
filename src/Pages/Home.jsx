@@ -29,7 +29,7 @@
           <div className='absolute top-0 -z-50 -right-0'><img src={pattern} className='w-full object-cover h-screen' alt="" /></div>
         </div>
       <div onClick={()=>{setShowProjects(true)}} style={{left:`${mousePosition.x}px`,top:`${mousePosition.y}px`}} className={`absolute group/item duration-500 flex items-center justify-center top-0 right-0 w-28 h-28 rounded-full ring-1 ring-white/50 hover:ring-white/80 ${showProjects ? 'opacity-0' : 'opacity-100'}`}>
-        <p className='font-semibold text-light text-[12px] duration-700  text-white'>Show Projects</p>
+        <p className='font-semibold text-light cursor-pointer text-[12px] duration-700  text-white'>Show Projects</p>
       </div>
       </div>
       <ProjectModal showProjects={showProjects} setShowProjects={setShowProjects} />
