@@ -2,14 +2,16 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='flex fixed w-full top-0 right-0 items-center justify-between px-12 py-4'>
-      <h1 className='font-semibold text-sm'>Portfolio</h1>
-        <div className='gap-4 flex items-center'>
-            <button className=' '><i className='bx bx-receipt'></i></button>
-            <button className=' '><i className='bx bxl-github'></i></button>
-            <button className=' '><i className='bx bxl-linkedin'></i></button>
-        </div>
+    <>
+    <div className='p-10 fixed w-full top-0 right-0 flex items-center justify-between'>
+      <p className='font-bold leading-3 -tracking-[2px] text-2xl text-[#6ace60]'>Rishi</p>
+      <div className='space-y-1 items-center flex justify-center flex-col'>
+        <div className='block w-2 h-[1px] bg-white'></div>
+        <div className='block w-4 h-[1px] bg-white'></div>
+        <div className='block w-2 h-[1px] bg-white'></div>
+      </div>
     </div>
+    </>
   )
 }
 

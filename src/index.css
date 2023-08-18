@@ -12,3 +12,7 @@ body{
 }
 
 .shadow-custom{box-shadow: 0px 0px 36px 10px #efefef;}
+
+body{background-color: black;overflow: hidden;}
+
+.restrict-scroll::-webkit-scrollbar{display: none;}

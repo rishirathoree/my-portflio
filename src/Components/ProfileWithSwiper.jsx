@@ -34,7 +34,7 @@ const ProfileWithSwiper = () => {
       <p className='font-normal text-sm my-4'>Experience : 6 Months</p>
     {skills.map((item,index)=>{
           return(
-            <span className={` translate-y-[${currentIndex *4}px] ${currentIndex === index ? 'relative duration-500 opacity-100' : 'absolute duration-0  opacity-0'}`}><p className='font-semibold text-md'>{item}</p></span>
+            <span className={`${currentIndex === index ? 'relative duration-1000 opacity-100' : 'absolute duration-0  opacity-0'}`}><p className='font-semibold text-md'>{item}</p></span>
           )
         })} 
     </div> 
