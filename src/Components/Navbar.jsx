@@ -6,6 +6,7 @@ const Navbar = ({showProjects,setShowProjects}) => {
   }
   return (
     <>
+
     <div className='p-10 fixed w-full top-0 right-0 flex items-center justify-between'>
       <p className='font-bold leading-3 -tracking-[2px] text-2xl text-[#6ace60]'>Rishi</p>
       <div onClick={toggleProject} className={`space-y-1 items-center flex justify-center flex-col`}>

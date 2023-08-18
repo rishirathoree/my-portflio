@@ -3,8 +3,10 @@
   import { Link } from 'react-router-dom'
   import Navbar from '../Components/Navbar'
   import ProjectModal from '../Components/ProjectModal'
+import Loader from '../Components/Loader'
   const Home = () => {
     const [showProjects,setShowProjects] = useState(false)
+    const [shimmer,setShimmer] = useState(true)
     const [mousePosition,setMousePosition] = useState({x:0,y:0})
     const mousePositionValue = (e) => {
       if(!showProjects && window.innerWidth > 300){
@@ -13,8 +15,18 @@
       setMousePosition({x:mouseX,y:mouseY})
       }
     }
+    useEffect(()=>{
+      const shimmertimout = () => {
+        setShimmer(false)
+      } 
+      const timeoutVariable = setTimeout(shimmertimout, 2000);
+      return()=>{
+        clearTimeout(timeoutVariable)
+      }
+    },[])
     return (
       <>
+          <Loader shimmer={shimmer} />
       <Navbar setShowProjects={setShowProjects} showProjects={showProjects} />
       <div onMouseMove={mousePositionValue} className='h-screen grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 overflow-hidden'>
         <div className='text-white flex items-center justify-start p-12'>
