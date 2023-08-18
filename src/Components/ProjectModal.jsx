@@ -29,7 +29,7 @@ const ProjectModal = ({showProjects,setShowProjects}) => {
   return (
     <>
     <div ref={modal} onClick={toggleProjectOpacity} className={`top-0 duration-100 left-0 h-screen flex items-end justify-end bg-black/50 w-full fixed ${showProjects ? 'visible opacity-100' : 'invisible opacity-0'}`}>
-        <div className={`h-[calc(100vh-10%)] transition-transform bg-white/5   ${showProjects ? 'delay-500 duration-1000 translate-y-0 ' : 'duration-0 delay-0 translate-y-full '} overflow-y-auto bg-white gap-8 restrict-scroll w-full rounded-t-3xl p-12 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1`}>
+        <div className={`h-[calc(100vh-10%)] transition-transform bg-white/5  ${showProjects ? 'delay-500 duration-1000 translate-y-0' : 'duration-0 delay-0 translate-y-full'} overflow-y-auto bg-white gap-8 restrict-scroll w-full rounded-t-3xl p-12 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1`}>
             {projects.map((item,idx)=>{
                 return(
                     <Link to={item.link}>
@@ -37,7 +37,7 @@ const ProjectModal = ({showProjects,setShowProjects}) => {
                         <div className='absolute z-50 bg-gradient-to-t from-black/50 to-white/0 flex items-end justify-end p-4 w-full h-full top-0 left-0'>
                             <p className='font-semibold group-hover:pb-2 duration-200 text-white text-[12px]'>{item.title.slice(0,40)}</p>
                         </div>
-                        <div><img src={item.image} className='w-full h-full object-cover' alt="" /></div>
+                        <div><img src={item.image} className='w-full group-hover:scale-110 duration-500 h-full object-cover' alt="" /></div>
                      </div>
                     </Link>
                 )
